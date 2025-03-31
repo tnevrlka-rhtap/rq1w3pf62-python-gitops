@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: rq1w3pf62-python-gitops
+  description: This is GitOps manifest for rq1w3pf62-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=rq1w3pf62-python
+    backstage.io/kubernetes-id: rq1w3pf62-python 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: tnevrlka-rhtap/rq1w3pf62-python-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:rq1w3pf62-python
